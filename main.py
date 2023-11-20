@@ -18,7 +18,8 @@ class CirclePainter(QMainWindow):
     def generate_circles(self):
         # Создаем новый круг и добавляем его в список кругов
         diameter = random.randint(20, 100)
-        color = QColor(Qt.yellow)
+        color = QColor(random.randint(0, 255), random.randint(0, 255),
+                       random.randint(0, 255))
         x = random.randint(0, self.width() - diameter)
         y = random.randint(0, self.height() - diameter)
         self.circles.append((x, y, diameter, color))
